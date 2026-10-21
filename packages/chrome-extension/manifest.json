@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Harness Ctrl Chrome",
+  "version": "1.0.0",
+  "description": "Permite controlar o Chrome via MCP (OpenCode e DeepSeek Harness) por meio do host de mensagens nativas.",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "scripting",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_title": "Harness Ctrl Chrome",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "minimum_chrome_version": "120"
+}

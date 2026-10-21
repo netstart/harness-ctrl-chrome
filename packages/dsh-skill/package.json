@@ -1,0 +1,7 @@
+{
+  "name": "@harness-ctrl-chrome/dsh-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Instrucoes (skill) opcional para o DeepSeek Harness usar as ferramentas MCP de controle do Chrome.",
+  "files": ["instructions.md", "USAR.md"]
+}

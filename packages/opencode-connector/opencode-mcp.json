@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "harness-ctrl-chrome": {
+      "command": "node",
+      "args": ["C:\\src\\harness-ctrl-chrome\\packages\\mcp-server-chrome\\dist\\index.js"],
+      "env": {
+        "MCP_CHROME_PORT": "8765",
+        "MCP_COMMAND_TIMEOUT_MS": "30000"
+      },
+      "description": "Controla o Chrome (abas, navegacao, formularios, leitura, capturas de tela) via extensao Harness Ctrl Chrome."
+    }
+  }
+}

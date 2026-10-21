@@ -1,0 +1,29 @@
+{
+  "name": "@harness-ctrl-chrome/mcp-server-chrome",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor MCP (stdio) que expõe ferramentas para controlar o Chrome (abas, navegação, formulários, leitura, capturas de tela) por meio do host de mensagens nativas e da extensão Chrome.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-server-chrome": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "test": "jest",
+    "lint": "echo 'lint: usar tsc --noEmit'"
+  },
+  "dependencies": {
+    "@harness-ctrl-chrome/shared-protocol": "file:../shared-protocol"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "rimraf": "^6.0.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.0"
+  }
+}

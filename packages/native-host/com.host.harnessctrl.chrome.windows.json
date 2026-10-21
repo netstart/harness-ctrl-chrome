@@ -1,0 +1,9 @@
+{
+  "name": "Harness Ctrl Chrome Host",
+  "description": "Host de mensagens nativas para a extensao Harness Ctrl Chrome.",
+  "path": "C:\\src\\harness-ctrl-chrome\\packages\\native-host\\dist\\index.js",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://__EXTENSION_ID__/"
+  ]
+}

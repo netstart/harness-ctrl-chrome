@@ -1,0 +1,28 @@
+{
+  "name": "harness-ctrl-chrome",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo integrado: extensão Chrome + host de mensagens nativas + servidor MCP para controlar o Chrome via chat (OpenCode e DeepSeek Harness).",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "test:watch": "npm run test --workspaces --if-present -- --watch",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

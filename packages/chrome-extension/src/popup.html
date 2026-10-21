@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harness Ctrl Chrome - Status</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 16px; background: #f5f7fa; color: #111827; }
+    .card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); max-width: 420px; }
+    h1 { font-size: 16px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot.on { background: #16a34a; box-shadow: 0 0 0 2px rgba(22,163,74,0.2); }
+    .dot.off { background: #ef4444; box-shadow: 0 0 0 2px rgba(239,68,68,0.2); }
+    p { font-size: 13px; color: #4b5563; margin: 0 0 16px; }
+    .row { display: flex; gap: 8px; margin-bottom: 12px; }
+    button { flex: 1; padding: 10px 14px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; cursor: pointer; font-size: 13px; }
+    button:hover { border-color: #2563eb; color: #2563eb; }
+    button.primary { background: #2563eb; color: #fff; border-color: #2563eb; }
+    button.primary:hover { background: #1d4ed8; }
+    pre { font-size: 11px; color: #6b7280; background: #f3f4f6; padding: 10px; border-radius: 6px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1><span class="dot" id="statusDot"></span>Harness Ctrl Chrome</h1>
+    <p id="statusText">Conectando ao host de mensagens nativas...</p>
+    <div class="row">
+      <button class="primary" id="btnReconectar">Reconectar</button>
+      <button id="btnAbrirOpcoes">Opções</button>
+    </div>
+    <pre id="log"></pre>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

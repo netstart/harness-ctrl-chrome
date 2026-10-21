@@ -1,0 +1,26 @@
+{
+  "name": "@harness-ctrl-chrome/native-host",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Host de mensagens nativas do Chrome. Faz a ponte entre a extensao Chrome (Native Messaging, stdio com framing de 4 bytes) e o servidor MCP (TCP localhost).",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "native-host": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "test": "jest",
+    "lint": "echo 'lint: usar tsc --noEmit'"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "rimraf": "^6.0.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.0"
+  }
+}

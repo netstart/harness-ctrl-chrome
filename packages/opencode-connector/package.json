@@ -1,0 +1,7 @@
+{
+  "name": "@harness-ctrl-chrome/opencode-connector",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Conector OpenCode para o servidor MCP de controle do Chrome. O OpenCode já possui cliente MCP nativo: este pacote contem apenas o arquivo de configuracao de exemplo e instrucoes de ligacao.",
+  "files": ["opencode-mcp.json", "README.md", "INSTALAR.md"]
+}

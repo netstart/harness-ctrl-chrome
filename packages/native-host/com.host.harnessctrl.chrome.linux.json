@@ -1,0 +1,9 @@
+{
+  "name": "com.harnessctrl.chrome.host",
+  "description": "Native messaging host for the Harness Ctrl Chrome extension.",
+  "path": "/usr/local/bin/native-host",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://__EXTENSION_ID__/"
+  ]
+}
