@@ -153,8 +153,16 @@ function sendMcpMessage(message: unknown): void {
 rl.on('line', async (line) => {
   const trimmed = line.trim();
   if (!trimmed) return;
-  const response = await handler.handleLine(trimmed);
-  if (response) sendMcpMessage(response);
+  try {
+    const response = await handler.handleLine(trimmed);
+    if (response) sendMcpMessage(response);
+  } catch (err) {
+    console.error('[mcp-server-chrome] erro ao processar linha:', err);
+    // Envia erro de parse para o cliente para nao travar o servidor.
+    try {
+      sendMcpMessage({ jsonrpc: '2.0', id: null, error: { code: -32603, message: String(err) } });
+    } catch { /* ignore */ }
+  }
 });
 
 rl.on('close', () => {

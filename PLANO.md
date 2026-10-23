@@ -68,7 +68,7 @@ cliente MCP (OpenCode / DSH)
 7. [x] `chrome-extension` (manifest V3, background, content, popup, manífesto)
 8. [x] `chrome-extension` (testes de content script)
 9. [ ] `dsh-skill` (instruções para o DeepSeek Harness)
-10. [ ] `opencode-connector` (configuração de exemplo + docs)
+10. [x] `opencode-connector` (configuração de exemplo + docs — adaptado ao OpenCode v2)
 11. [ ] Build de todos os pacotes + execução dos testes
 12. [ ] Documentação de cada projeto + README consolidado
 13. [ ] Commit e push no repositório

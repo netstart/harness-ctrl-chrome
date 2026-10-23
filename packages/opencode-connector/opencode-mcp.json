@@ -1,4 +1,13 @@
 {
+  // ATENCAO: este formato (mcpServers / command / args / env) e o padrao MCP
+  // legado do OpenCode v1 (~/.opencode/mcp.json). O OpenCode v2 nao le este
+  // arquivo nem este formato. Para o OpenCode v2 use o arquivo opencode.json
+  // ao lado, no formato nativo nativo do v2 (mcp.servers[].type = "local").
+  //
+  // Copie o conteudo de opencode.json para o seu arquivo de configuracao
+  // global do OpenCode v2 (opencode.json / opencode.jsonc no diretorio global
+  // de config, ex. ~/.config/opencode/ no Linux/macOS ou %APPDATA%\opencode no
+  // Windows) e ajuste o caminho em "cwd" para o seu SO.
   "mcpServers": {
     "harness-ctrl-chrome": {
       "command": "node",

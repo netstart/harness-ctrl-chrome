@@ -1,8 +1,8 @@
-# Conector OpenCode — Controle do Chrome via MCP
+# Conector OpenCode — Controle do Chrome via MCP (OpenCode v2)
 
 ## O que este pacote faz
 
-O **OpenCode** (opencode-ai) ja possui suporte nativo a servidores MCP: voce configura um ou mais servidores em `~/.opencode/mcp.json` e o modelo passa a enxergar suas ferramentas como "tools" disponiveis durante a conversa.
+O **OpenCode** (opencode-ai, versao 2) ja possui suporte nativo a servidores MCP: voce configura um ou mais servidores em `opencode.json` / `opencode.jsonc` (diretorio global de config) e o modelo passa a enxergar suas ferramentas como "tools" disponiveis durante a conversa.
 
 Neste repositorio, o servidor e o `mcp-server-chrome` (projeto `packages/mcp-server-chrome`), que expoe as seguintes ferramentas ao OpenCode:
 
@@ -45,9 +45,7 @@ Neste repositorio, o servidor e o `mcp-server-chrome` (projeto `packages/mcp-ser
    node packages/native-host/dist/index.js
    ```
 
-6. **Configure o OpenCode**: copie o conteudo de `opencode-mcp.json` para o seu `~/.opencode/mcp.json` (ou adicione a entrada `harness-ctrl-chrome` ao arquivo existente).
-
-   No Linux/macOS, altere o `args` para o caminho absoluto correto do `dist/index.js`.
+6. **Configure o OpenCode v2**: copie o conteudo de `opencode.json` para o seu arquivo de configuracao global do OpenCode v2 (`opencode.json` / `opencode.jsonc` no diretorio global de config, ex. `~/.config/opencode/` no Linux/macOS ou `%APPDATA%\opencode` no Windows). Ajuste o caminho em `cwd` para o seu SO.
 
 7. Reinicie o OpenCode. O modelo agora pode controlar o Chrome pela conversa.
 
@@ -72,4 +70,8 @@ OpenCode (cliente MCP nativo)
 
 ## Nao e necessario plugin separado
 
-Como o OpenCode já fala MCP nativamente, nao e necessario criar um plugin especifico para ele. Este pacote apenas documenta a ligacao. Se no futuro o OpenCode mudar seu modelo de extensao, basta adaptar a configuracao de `opencode-mcp.json`.
+Como o OpenCode v2 ja fala MCP nativamente, nao e necessario criar um plugin especifico para ele. Este pacote contem o arquivo de configuracao de exemplo no formato nativo do v2 (`opencode.json`) e instrucoes de ligacao.
+
+## Nota sobre o formato legado
+
+O arquivo `opencode-mcp.json` mantem o formato MCP legado (`mcpServers`) do OpenCode v1 (`~/.opencode/mcp.json`) apenas como referencia. Ele **nao funciona** com o OpenCode v2. Use sempre `opencode.json`.

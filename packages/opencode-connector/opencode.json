@@ -1,0 +1,15 @@
+{
+  "mcp": {
+    "servers": {
+      "harness-ctrl-chrome": {
+        "type": "local",
+        "command": ["node", "dist/index.js"],
+        "cwd": "C:\\src\\harness-ctrl-chrome\\packages\\mcp-server-chrome",
+        "environment": {
+          "MCP_CHROME_PORT": "8765",
+          "MCP_COMMAND_TIMEOUT_MS": "30000"
+        }
+      }
+    }
+  }
+}
